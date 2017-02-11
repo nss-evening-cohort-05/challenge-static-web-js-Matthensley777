@@ -1,43 +1,28 @@
-function christmasTree(treeSize) {
-	var starTree;
+function christmasTreeVars() {
+	var treeSize = document.getElementById("size").value;
+	var treeCharictor = document.getElementById("char").value;
+	var tree =  {height:treeSize*1,  char:treeCharictor};
+	growTree(tree);
+	
 }	
-// Create an array that contains the letters of the alphabet
-var tree = "*"
-
-// The stackLetter function should accept the array as the sole argument
-    /*
-      Write a `for` loop that iterates over the array argument and
-      outputs the letters.
-     */
- 
-var treeStack = [];
- for (var i = 0; i < tree.length; i++) {
- 	
- 	treeStack.push(tree[i]);
- 	if(i % 3 === 2)
- 	treeStack.push(" ");
 
 
- console.log(treeStack.toString().replace(/,/g, ""));
- }
-
-
-// Invoke the function and pass in the array
-stackLetters(tree)
+function growTree(treeObject) {
+	
+	 for (var i = 0; i < treeObject.height; i++){
+		var chars = 2*i+1;
+		var spaces = treeObject.height-(i+1);
+		
+		console.log(" ".repeat(spaces)+treeObject.char.repeat(chars))
+		
+	 }
 
 
 
-	alert(Both fields must have value!);
 }
 
-// for (i=0;i<=5;i++) 
-// {
-// for(j=0; j<=i; j++)
-// {
-// document.write("*");
-// }
-// document.write("<br>");
-// }
+// add event listener to "Grow Your tree" button
+document.getElementById("button").addEventListener("click", christmasTreeVars);
+document.getElementById("button").addEventListener("click", growTree);
+//when you click it fires off christmasTreeVars
 
-// for (int i = 0; i < 4; i++) 
-//             System.out.println("   *******".substring(i, 4 + 2*i));
