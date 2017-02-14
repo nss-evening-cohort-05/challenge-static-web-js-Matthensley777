@@ -5,20 +5,12 @@ function christmasTreeVars() {
 	growTree(tree);
 	
 }	
-
-
 function growTree(treeObject) {
-	
-	 for (var i = 0; i < treeObject.height; i++){
+	for (var i = 0; i < treeObject.height; i++){
 		var chars = 2*i+1;
 		var spaces = treeObject.height-(i+1);
-		
 		console.log(" ".repeat(spaces)+treeObject.char.repeat(chars))
-		
-	 }
-
-
-
+		}
 }
 
 // add event listener to "Grow Your tree" button
