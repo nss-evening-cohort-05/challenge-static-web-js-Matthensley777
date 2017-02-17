@@ -3,8 +3,7 @@ function christmasTreeVars() {
 	var treeCharictor = document.getElementById("char").value;
 	var tree =  {height:treeSize*1,  char:treeCharictor};
 	growTree(tree);
-	
-}	
+	}	
 function growTree(treeObject) {
 	for (var i = 0; i < treeObject.height; i++){
 		var chars = 2*i+1;
